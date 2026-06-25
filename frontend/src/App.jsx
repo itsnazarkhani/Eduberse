@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-   const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState("");
 
   useEffect(() => {
     fetch("/api/health")
-      .then(res => res.json())
-      .then(data => setMsg(data.status));
+      .then((res) => res.json())
+      .then((data) => setMsg(data.status));
   }, []);
 
   return (
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
